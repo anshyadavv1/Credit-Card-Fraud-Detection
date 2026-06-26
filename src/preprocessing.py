@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from imblearn.over_sampling import SMOTE
 
 def load_data(path):
     df=pd.read_csv(path)
@@ -36,3 +37,9 @@ def feature_scaling(x_train,x_test):
         x_test[["Amount", "Time"]])
     X_train_scaled[["Amount", "Time"]].describe()
     return X_train_scaled, X_test_scaled, scaler
+
+def apply_smote(x_train,y_train):
+    smote = SMOTE(random_state=42)
+    x_train_smote, y_train_smote = smote.fit_resample(x_train, y_train)
+    return x_train_smote, y_train_smote
+

@@ -4,9 +4,9 @@ average_precision_score,confusion_matrix,classification_report)
 
 
 
-def evaluate(model, x_test, y_test):
-    y_pred = model.predict(x_test)
-    y_prob=model.predict_prob(x_test)[:,1]
+def evaluate(model, x_test, y_test, threshold=0.5):
+    y_prob = model.predict_proba(x_test)[:, 1]
+    y_pred = (y_prob >= threshold).astype(int)
 
 
 
@@ -32,7 +32,7 @@ def evaluate(model, x_test, y_test):
     print("=" * 50)
 
     for metric,value in metrics.items():
-        print(f"{metric}: {value}")
+        print(f"{metric}: {value:.4f}")
     print("\nConfusion Matrix")
 
     print(confusion_matrix(y_test, y_pred))
