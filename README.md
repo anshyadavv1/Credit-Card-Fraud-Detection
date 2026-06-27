@@ -6,11 +6,11 @@ End-to-end Machine Learning system for detecting fraudulent credit card transact
 
 Live API
 
-credit-card-fraud-detection-production-355e.up.railway.app
+https://credit-card-fraud-detection-production-355e.up.railway.app
 
 Interactive API Documentation
 
-credit-card-fraud-detection-production-355e.up.railway.app/docs
+https://credit-card-fraud-detection-production-355e.up.railway.app/docs
 
 ⭐ The deployed API can be tested directly through Swagger UI.
 
