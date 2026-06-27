@@ -1,12 +1,31 @@
 Credit Card Fraud Detection System
 
-🚀 Overview
+End-to-end Machine Learning system for detecting fraudulent credit card transactions using Random Forest, XGBoost, Neural Networks (MLP), Stacking Ensembles, FastAPI, Docker, and Railway deployment.
 
-An end-to-end Machine Learning system for detecting fraudulent credit card transactions using multiple classification models, advanced imbalance handling techniques, ensemble learning, hyperparameter optimization, and production deployment.
+🚀 Live Demo
 
-This project goes beyond traditional fraud detection notebooks by implementing a complete ML workflow, including model experimentation, evaluation, API development, Docker containerization, and cloud deployment.
+Live API
 
-Key Highlights
+https://fraud-api-production.up.railway.app
+
+Interactive API Documentation
+
+https://fraud-api-production.up.railway.app/docs
+
+⭐ The deployed API can be tested directly through Swagger UI.
+
+⸻
+
+🏆 Best Model Performance (Deployed Model)
+
+<img width="1148" height="1280" alt="image" src="https://github.com/user-attachments/assets/8cfcb963-c5f5-44b6-95d5-d66db5c22738" />
+
+
+Deployment Stack: FastAPI + Docker + Railway
+
+⸻
+
+📌 Project Highlights
 
 * End-to-End ML Pipeline
 * Fraud Detection on Highly Imbalanced Data
@@ -16,9 +35,27 @@ Key Highlights
 * Stacking Ensemble Learning
 * Feature Selection Analysis
 * Threshold Optimization
+* Error Analysis
 * FastAPI REST API
 * Docker Containerization
-* Cloud Deployment
+* Railway Cloud Deployment
+
+⸻
+
+💡 Why This Project Matters
+
+Credit card fraud detection is a real-world machine learning problem involving extreme class imbalance, where traditional metrics like accuracy can be misleading.
+
+This project focuses on maximizing fraud detection performance through:
+
+* Advanced imbalance handling techniques
+* Ensemble learning
+* Hyperparameter optimization
+* Error analysis
+* Neural Network integration
+* Production deployment
+
+The final system demonstrates the complete machine learning lifecycle from data preprocessing and model experimentation to API development, containerization, and cloud deployment.
 
 ⸻
 
@@ -35,7 +72,6 @@ Challenges include:
 
 The objective is to accurately identify fraudulent transactions while minimizing missed fraud cases.
 
-⸻
 
 📂 Dataset
 
@@ -148,17 +184,13 @@ Used as the initial baseline model.
 
 Results
 
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/580422da-db4b-4c9e-b2b3-900c14ea5d21" />
+<img width="1102" height="1280" alt="image" src="https://github.com/user-attachments/assets/d4eee57b-7abe-4e08-963d-c90406890c1a" />
 
 2. Random Forest + SMOTE
 
 SMOTE was applied to address class imbalance.
 
-
-
-
-
-
+<img width="1280" height="1178" alt="image" src="https://github.com/user-attachments/assets/c6bca6ad-84e3-4be2-b110-15e8f7d3c1e9" />
 
 Observation
 
@@ -181,15 +213,13 @@ F1 score       0.8655
 ROC-AUC        0.9728
 PR-AUC0.       0.8251
 
-
 4. Optuna-Tuned XGBoost
 
 Bayesian optimization using Optuna to find optimal hyperparameters.
 
 Results
 
-
-
+<img width="1034" height="1280" alt="image" src="https://github.com/user-attachments/assets/3a745843-ab49-4884-b32c-cf3e95ab8f69" />
 
 Observation
 
@@ -233,8 +263,7 @@ Meta Learner
   
 Results
 
-
-
+<img width="1148" height="1280" alt="image" src="https://github.com/user-attachments/assets/378093d8-8af2-42ef-9f91-4c98fce82e9a" />
 
 Conclusion
 
@@ -362,6 +391,8 @@ Features:
 * CI/CD Pipeline
 * Automated Retraining
 * Real-Time Fraud Streaming
+
+
 
 ⸻
 
