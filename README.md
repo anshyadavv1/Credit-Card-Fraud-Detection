@@ -95,59 +95,13 @@ Target:
 
 🏗️ Project Architecture
 
-Credit-Card-Fraud-Detection/
-│
-├── api/
-│   └── main.py
-│
-├── artifacts/
-│   ├── model.pkl
-│   └── scaler.pkl
-│
-├── data/
-│
-├── notebook/
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── model.py
-│   ├── train.py
-│   ├── evaluate.py
-│   ├── save_model.py
-│   └── predict.py
-│
-├── Dockerfile
-├── requirements.txt
-├── .dockerignore
-└── README.md
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/452f2323-d7a4-4d45-b589-9459bfb648d5" />
+
 
 ⚙️ Workflow
 
-Data Collection
-        ↓
-Data Cleaning
-        ↓
-Duplicate Removal
-        ↓
-Train-Test Split
-        ↓
-Feature Scaling
-        ↓
-Model Training
-        ↓
-Hyperparameter Tuning
-        ↓
-Model Evaluation
-        ↓
-Error Analysis
-        ↓
-Model Saving
-        ↓
-FastAPI API
-        ↓
-Docker Container
-        ↓
-Cloud Deployment
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/7c2a8e11-9433-443d-8c5c-3aeafb83985c" />
+
 
 🛠️ Technologies Used
 
