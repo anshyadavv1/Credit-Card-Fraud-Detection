@@ -28,7 +28,6 @@ trained_model = train_model(
     x_train_scaled, y_train)
 
 from src.save_model import save_artifacts
-
 save_artifacts(
     trained_model,
     scaler
