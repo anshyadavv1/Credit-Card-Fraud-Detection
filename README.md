@@ -352,6 +352,153 @@ docker build -t fraud-api .
 Run
 docker run -p 8000:8000 fraud-api
 
+
+# API Usage
+
+This project exposes the trained fraud detection model through a FastAPI REST API deployed on Railway, allowing users and applications to obtain real-time fraud predictions from anywhere.
+
+## Live API
+
+Base URL:
+
+```text
+https://credit-card-fraud-detection-production-355e.up.railway.app/
+```
+
+## Interactive API Documentation
+
+FastAPI automatically generates Swagger documentation.
+
+Open:
+
+```text
+https://credit-card-fraud-detection-production-355e.up.railway.app/docs
+```
+
+Using Swagger UI, users can:
+
+- View available endpoints
+- Check request and response schemas
+- Test the API directly from the browser
+- Validate model predictions
+
+## Fraud Prediction Endpoint
+
+### Endpoint
+
+```http
+POST https://credit-card-fraud-detection-production-355e.up.railway.app/predict
+```
+
+### Sample Request
+
+```json
+{
+  "Time": 45000,
+  "V1": 0.25,
+  "V2": -0.12,
+  "V3": 1.45,
+  "V4": 0.30,
+  "V5": -0.22,
+  "V6": 0.10,
+  "V7": 0.05,
+  "V8": -0.03,
+  "V9": 0.50,
+  "V10": -0.15,
+  "V11": 0.80,
+  "V12": -0.45,
+  "V13": 0.20,
+  "V14": -0.30,
+  "V15": 0.10,
+  "V16": 0.25,
+  "V17": -0.15,
+  "V18": 0.40,
+  "V19": -0.05,
+  "V20": 0.02,
+  "V21": -0.01,
+  "V22": 0.15,
+  "V23": -0.08,
+  "V24": 0.12,
+  "V25": 0.20,
+  "V26": -0.05,
+  "V27": 0.01,
+  "V28": 0.02,
+  "Amount": 125.50
+}
+```
+
+### Sample Response
+
+```json
+{
+  "prediction": "Not Fraud",
+  "fraud_probability": 0.0214
+}
+```
+
+## Using Python
+
+```python
+import requests
+
+url = "https://credit-card-fraud-detection-production-355e.up.railway.app/predict"
+
+data = {
+    "Time": 45000,
+    "V1": 0.25,
+    "V2": -0.12,
+    "V3": 1.45,
+    "V4": 0.30,
+    "V5": -0.22,
+    "V6": 0.10,
+    "V7": 0.05,
+    "V8": -0.03,
+    "V9": 0.50,
+    "V10": -0.15,
+    "V11": 0.80,
+    "V12": -0.45,
+    "V13": 0.20,
+    "V14": -0.30,
+    "V15": 0.10,
+    "V16": 0.25,
+    "V17": -0.15,
+    "V18": 0.40,
+    "V19": -0.05,
+    "V20": 0.02,
+    "V21": -0.01,
+    "V22": 0.15,
+    "V23": -0.08,
+    "V24": 0.12,
+    "V25": 0.20,
+    "V26": -0.05,
+    "V27": 0.01,
+    "V28": 0.02,
+    "Amount": 125.50
+}
+
+response = requests.post(url, json=data)
+print(response.json())
+```
+
+## Using cURL
+
+```bash
+curl -X POST "https://credit-card-fraud-detection-production-355e.up.railway.app/predict" \
+-H "Content-Type: application/json" \
+-d @sample_input.json
+```
+
+## Deployment
+
+The model is deployed using:
+
+- FastAPI
+- Railway
+- Python
+- Scikit-Learn/XGBoost
+
+This deployment demonstrates a production-ready machine learning workflow where a trained fraud detection model is served through a scalable REST API and can be consumed by external applications in real time.
+
 ☁️ Deployment
 
 The application is deployed on Railway using Docker.
